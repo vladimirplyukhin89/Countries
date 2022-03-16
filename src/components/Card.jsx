@@ -12,9 +12,13 @@ const CardImage = styled.img`
     display: block;
     width: 100%;
     height: 150px;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     box-shadow: var(--shadow);
+
+    ${'' /*@media(min-width: 1024px) {
+        object-fit: cover;
+    }*/}
 `;
 
 const CardBody = styled.div`
