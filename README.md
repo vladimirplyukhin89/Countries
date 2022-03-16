@@ -7,7 +7,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
+  - [My process](#my-process)
   - [Built with](#built-with)
 
 ### The challenge
@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Screenshot
 
-![1st example](./design/exp1.png)
-![2nd example](./design/exp2.png)
+[1st example](./design/exp1.png)
+[2nd example](./design/exp2.png)
 ### Links
 
 - Solution URL: [GitHub](https://github.com/vladimirplyukhin89/Countries)
