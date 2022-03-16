@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.article`
     border-radius: var(--radius);
@@ -12,7 +12,7 @@ const CardImage = styled.img`
     display: block;
     width: 100%;
     height: 150px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     box-shadow: var(--shadow);
 `;

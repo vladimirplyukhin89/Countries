@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { IoSearchOutline } from 'react-icons/io5';
+import { IoSearchOutline } from "react-icons/io5";
 
 const InputContainer = styled.label`
     background-color: var(--colors-ui-base);

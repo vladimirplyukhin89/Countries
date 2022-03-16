@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
+import styled from 'styled-components';
+
 import { Search } from './Search';
 import { CustomSelect } from './CustomSelect';
-import styled from 'styled-components';
 
 const options = [
     { value: 'Africa', label: 'Africa' },
@@ -12,25 +13,25 @@ const options = [
 ];
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    @media(min-width: 767px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @media (min-width: 767px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 export const Controls = ({ onSearch }) => {
-
     const [search, setSearch] = useState('');
     const [region, setRegion] = useState('');
 
     useEffect(() => {
         const regionValue = region?.value || '';
         onSearch(search, regionValue);
+
+        // eslint-disable-next-line
     }, [search, region]);
 
     return (
@@ -38,10 +39,10 @@ export const Controls = ({ onSearch }) => {
             <Search search={search} setSearch={setSearch} />
             <CustomSelect
                 options={options}
-                placeholder='Filter by Region'
+                placeholder="Filter by Region"
                 isClearable
                 isSearchable={false}
-                region={region}
+                value={region}
                 onChange={setRegion}
             />
         </Wrapper>
