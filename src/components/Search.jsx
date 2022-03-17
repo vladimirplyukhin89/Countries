@@ -33,10 +33,12 @@ const Input = styled.input.attrs({
 `;
 
 export const Search = ({ search, setSearch }) => {
+
+    let getValue = (e) => setSearch(e.target.value.trimEnd());
     return (
         <InputContainer>
             <IoSearchOutline />
-            <Input onChange={(e) => setSearch(e.target.value)} value={search} />
+            <Input onChange={getValue} value={search} />
         </InputContainer>
     );
 };

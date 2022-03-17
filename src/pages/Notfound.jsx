@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 export const Notfound = () => {
     return (
         <div>
-            This page doesn't exist.
+            <Link to='/'>
+                Chose your favorite country.
+            </Link>
         </div>
     );
 };
