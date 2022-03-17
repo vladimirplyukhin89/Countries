@@ -36,7 +36,8 @@ export const Search = ({ search, setSearch }) => {
 
     const getValue = (e) => {
         let val = setSearch(e.target.value);
-        return val.trimEnd();
+        console.log(val);
+        return val;
     };
     return (
         <InputContainer>

@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import { Header } from './components/Header';
-import { Main } from './components/Main';
+import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
 import { Details } from './pages/Details';
 import { Notfound } from './pages/Notfound';
@@ -12,15 +11,13 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Main>
-        <Routes>
-          <Route exact path='/' element={<HomePage countries={countries} setCountries={setCountries} />} >
-            <Route path='/country/:name' element={<Details />} />
-            <Route path='*' element={<Notfound />} />
-          </Route>
-        </Routes>
-      </Main>
+      <Routes>
+        <Route path='/' element={<Layout />} >
+          <Route index element={<HomePage countries={countries} setCountries={setCountries} />} />
+          <Route path='country/:name' element={<Details />} />
+          <Route path='*' element={<Notfound />} />
+        </Route>
+      </Routes>
     </>
   );
 };
