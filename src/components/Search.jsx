@@ -36,7 +36,6 @@ export const Search = ({ search, setSearch }) => {
 
     const getValue = (e) => {
         let val = setSearch(e.target.value);
-        console.log(val);
         return val;
     };
     return (
