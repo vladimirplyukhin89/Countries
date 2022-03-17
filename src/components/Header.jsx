@@ -22,7 +22,6 @@ const Title = styled(Link).attrs({
   color: var(--colors-text);
   font-size: var(--fs-sm);
   text-decoration: none;
-  font-weight: var(--fw-bold);
 `;
 
 const ModeSwitcher = styled.div`
