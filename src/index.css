@@ -42,3 +42,14 @@ body {
   font-weight: var(--fw-light);
   background-color: var(--color-bg);
 }
+
+a {
+  padding: 0 1rem;
+  background-color: var(--colors-ui-base);
+  box-shadow: var(--shadow);
+  line-height: 1.5;
+  border-radius: var(--radius);
+  font-weight: var(--fw-normal);
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -15,10 +15,6 @@ const CardImage = styled.img`
     object-fit: cover;
     object-position: center;
     box-shadow: var(--shadow);
-
-    ${'' /*@media(min-width: 1024px) {
-        object-fit: cover;
-    }*/}
 `;
 
 const CardBody = styled.div`

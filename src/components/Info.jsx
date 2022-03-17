@@ -2,6 +2,7 @@ import styled from "styled-components";
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { filterByCode } from '../config';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.section`
   margin-top: 1rem;
@@ -77,14 +78,7 @@ const TagGroup = styled.div`
   flex-wrap: wrap;
 `;
 
-const Tag = styled.span`
-  padding: 0 1rem;
-  background-color: var(--colors-ui-base);
-  box-shadow: var(--shadow);
-  line-height: 1.5;
-  border-radius: var(--radius);
-  font-weight: var(--fw-normal);
-`;
+const Tag = styled.a``;
 
 export const Info = (props) => {
   const {
@@ -157,6 +151,7 @@ export const Info = (props) => {
             </ListItem>
           </List>
         </ListGroup>
+
         <Meta>
           <b>Border Countries:</b>
           {!borders.length ? (
@@ -164,7 +159,9 @@ export const Info = (props) => {
           ) : (
             <TagGroup>
               {neighbors.map(b => (
-                <Tag key={b}>{b}</Tag>
+                <Link to={`/country/${b}`}>
+                  <Tag key={b}>{b}</Tag>
+                </Link>
               ))}
             </TagGroup>
           )}
