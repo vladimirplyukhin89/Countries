@@ -21,9 +21,9 @@ export const HomePage = ({ countries, setCountries }) => {
             data = data.filter(c =>
                 c.name.toLowerCase().includes(search.toLowerCase()));
 
-            data.forEach(c => {
+            data.map(c => {
                 //if (c.name.length > 12) {
-                return c.name.trimEnd();
+                c.name.trimEnd();
                 //}
             });
         }
