@@ -14,10 +14,11 @@ function App() {
     <>
       <Header />
       <Main>
-        <Routes path='/'>
-          <Route index element={<HomePage countries={countries} setCountries={setCountries} />} />
-          <Route path='/country/:name' element={<Details />} />
-          <Route path='*' element={<Notfound />} />
+        <Routes>
+          <Route exact path='/' element={<HomePage countries={countries} setCountries={setCountries} />} >
+            <Route path='/country/:name' element={<Details />} />
+            <Route path='*' element={<Notfound />} />
+          </Route>
         </Routes>
       </Main>
     </>

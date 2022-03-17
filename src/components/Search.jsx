@@ -34,7 +34,10 @@ const Input = styled.input.attrs({
 
 export const Search = ({ search, setSearch }) => {
 
-    let getValue = (e) => setSearch(e.target.value.trimEnd());
+    const getValue = (e) => {
+        let val = setSearch(e.target.value);
+        return val.trimEnd();
+    };
     return (
         <InputContainer>
             <IoSearchOutline />
