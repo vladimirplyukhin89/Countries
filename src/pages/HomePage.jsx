@@ -22,9 +22,9 @@ export const HomePage = ({ countries, setCountries }) => {
                 c.name.toLowerCase().includes(search.toLowerCase()));
 
             data.forEach(c => {
-                if (c.name.length > 13) {
-                    return c.name.trimEnd();
-                }
+                //if (c.name.length > 12) {
+                return c.name.trimEnd();
+                //}
             });
         }
 
