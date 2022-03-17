@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom';
+
 export const Notfound = () => {
     return (
         <div>
             <div>
-                This page doesn't exist
+                <Link to='/'>
+                    Click me for searching your fav country
+                </Link>
             </div>
         </div>
     );
