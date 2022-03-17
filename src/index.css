@@ -52,4 +52,5 @@ a {
   font-weight: var(--fw-normal);
   cursor: pointer;
   text-decoration: none;
+  color: var(--colors-text);
 }
