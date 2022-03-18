@@ -20,20 +20,7 @@ export const HomePage = ({ countries, setCountries }) => {
         if (search) {
             data = data.filter(c =>
                 c.name.toLowerCase().includes(search.toLowerCase()));
-
-            data.map(c => {
-                //if (c.name.length > 12) {
-                c.name.trimEnd();
-                //}
-            });
         }
-
-        //for (let i = 0; i < data.length; i++) {
-
-        //    console.log(data[i].name.length);
-        //    console.log(data[i].name);
-        //    if (data[i].name.length < 12) data[i].name = data[i].name.trimEnd();
-        //}
 
         setFilteredCountries(data);
     };

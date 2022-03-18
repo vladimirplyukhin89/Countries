@@ -35,8 +35,13 @@ const Input = styled.input.attrs({
 export const Search = ({ search, setSearch }) => {
 
     const getValue = (e) => {
-        let val = setSearch(e.target.value);
-        return val;
+        let val = e.target.value;
+        if (val.length > 12) {
+            let res = val.replace(/ +/g, ' ').trimEnd();
+            return setSearch(res);
+        }
+
+        return setSearch(val);
     };
     return (
         <InputContainer>
