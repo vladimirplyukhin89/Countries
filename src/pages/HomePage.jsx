@@ -25,14 +25,6 @@ export const HomePage = ({ countries, setCountries }) => {
         setFilteredCountries(data);
     };
 
-
-    useEffect(() => {
-        if (!countries.length)
-            axios.get(ALL_COUNTRIES).then(
-                ({ data }) => setCountries(data)
-            );
-    }, []);
-
     return (
         <>
             <Controls onSearch={handleSearch} />
@@ -71,4 +63,4 @@ export const HomePage = ({ countries, setCountries }) => {
             </List>
         </>
     );
-};
+}; 

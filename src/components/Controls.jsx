@@ -5,7 +5,7 @@ import { Search } from './Search';
 import { CustomSelect } from './CustomSelect';
 
 const options = [
-    { value: 'Africa', label: 'Africa' },
+    { value: 'Africa', label: 'Africa', selectOption: 'required' },
     { value: 'Americas', label: 'Americas' },
     { value: 'Asia', label: 'Asia' },
     { value: 'Europe', label: 'Europe' },
