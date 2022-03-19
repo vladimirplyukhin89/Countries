@@ -22,7 +22,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Layout />} >
-          <Route index element={<HomePage countries={countries} setCountries={setCountries} />} />
+          <Route exact path='/' element={<HomePage countries={countries} setCountries={setCountries} />} />
           <Route path='country/:name' element={<Details />} />
           <Route path='*' element={<Notfound />} />
         </Route>
