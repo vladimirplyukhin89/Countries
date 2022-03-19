@@ -1,13 +1,25 @@
 import { Link } from 'react-router-dom';
+import worldImg from '../images/world-png.webp';
+import { WorldImage } from '../components/WorldImage';
+import { Container } from '../components/Container';
+
 
 export const Notfound = () => {
     return (
-        <div>
-            <div>
+        <Container>
+            <div >
                 <Link to='/'>
-                    Click me for searching your fav country
+                    <p style={
+                        {
+                            display: 'flex',
+                            "justify-content": 'center',
+                        }
+                    }>
+                        Start your research
+                    </p>
+                    <WorldImage src={worldImg} alt={'The world'} />
                 </Link>
             </div>
-        </div>
+        </Container>
     );
 };
