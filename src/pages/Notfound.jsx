@@ -15,7 +15,7 @@ export const Notfound = () => {
                             "justify-content": 'center',
                         }
                     }>
-                        Start your research
+                        Start your study
                     </p>
                     <WorldImage src={worldImg} alt={'The world'} />
                 </Link>
